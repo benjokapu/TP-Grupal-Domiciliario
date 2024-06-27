@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
 
@@ -55,7 +56,7 @@ public class juegoBehaviour : MonoBehaviour
 
     public void botonSalirActivado()
     {
-        
+        SceneManager.LoadScene("Inicio");
     }
 
     public void volverAIntentar()

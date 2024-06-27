@@ -1684,7 +1684,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 384524260}
-        m_MethodName: resetjuego
+        m_MethodName: volverAIntentar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2756,7 +2756,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Volver a intentar
+  m_Text: Volver
 --- !u!222 &747146959
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4803,7 +4803,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 384524260}
-        m_MethodName: resetjuego
+        m_MethodName: volverAIntentar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6340,7 +6340,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Reiniciar juego
+  m_Text: Volver a intentarlo
 --- !u!222 &1970240269
 CanvasRenderer:
   m_ObjectHideFlags: 0
