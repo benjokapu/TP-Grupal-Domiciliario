@@ -29,13 +29,13 @@ public class juegoBehaviour : MonoBehaviour
         int resultado = Convert.ToInt32(objeto1.text) + Convert.ToInt32(objeto2.text);
         if (checkearSuma(Convert.ToInt32(objeto1.text), Convert.ToInt32(objeto2.text), resultado)){
             panelBien.SetActive(true);
-            return;
         }
         else
         {
             panelMal.SetActive(true);
-            return;
         }
+        botonVolverAjugar.enabled = true;
+        botonResponder.enabled = false;
     }
 
     void volverAJugarActivado()
@@ -43,5 +43,16 @@ public class juegoBehaviour : MonoBehaviour
         panelNoResponde.SetActive(false);
         panelMal.SetActive(false);
         panelBien.SetActive(false);
+        botonVolverAjugar.enabled = false;
+        botonResponder.enabled = true;
+    }
+
+    void botonSalirActivado()
+    {
+        panelNoResponde.SetActive(false);
+        panelMal.SetActive(false);
+        panelBien.SetActive(false);
+        botonVolverAjugar.enabled = false;
+        botonResponder.enabled = true;
     }
 }
