@@ -17,7 +17,7 @@ public class juegoBehaviour : MonoBehaviour
 
     private void Start()
     {
-        iniciarJuego();
+        resetjuego();
     }
     bool checkearSuma(int num1, int num2, int resul)
     {
