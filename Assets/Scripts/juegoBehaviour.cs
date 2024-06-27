@@ -12,8 +12,13 @@ public class juegoBehaviour : MonoBehaviour
     public GameObject panelBien;
     public GameObject panelMal;
     public GameObject panelNoResponde;
-    public Button botonResponder;
-    public Button botonVolverAjugar;
+    public Producto[] productos1;
+    public Producto[] productos2;
+
+    private void Start()
+    {
+        iniciarJuego();
+    }
     bool checkearSuma(int num1, int num2, int resul)
     {
         return (num1 + num2 == resul) ? true : false;
@@ -34,25 +39,43 @@ public class juegoBehaviour : MonoBehaviour
         {
             panelMal.SetActive(true);
         }
-        botonVolverAjugar.enabled = true;
-        botonResponder.enabled = false;
     }
 
-    void volverAJugarActivado()
+    void resetjuego()
     {
         panelNoResponde.SetActive(false);
         panelMal.SetActive(false);
         panelBien.SetActive(false);
-        botonVolverAjugar.enabled = false;
-        botonResponder.enabled = true;
+        iniciarJuego();
     }
 
     void botonSalirActivado()
     {
-        panelNoResponde.SetActive(false);
-        panelMal.SetActive(false);
-        panelBien.SetActive(false);
-        botonVolverAjugar.enabled = false;
-        botonResponder.enabled = true;
+        
     }
+
+    void iniciarJuego()
+    {
+        Producto randProd1 = productos1[UnityEngine.Random.Range(0, productos1.Length - 1)];
+        Producto randProd2 = productos2[UnityEngine.Random.Range(0, productos2.Length - 1)];
+        deactivateAll();
+        randProd1.gameObject.SetActive(true);
+        randProd2.gameObject.SetActive(true);
+        objeto1.text = randProd1.precio.ToString();
+        objeto2.text = randProd2.precio.ToString();
+        resul.text = "";
+    }
+
+    void deactivateAll()
+    {
+        foreach (Producto producto in productos1)
+        {
+            producto.gameObject.SetActive(false);
+        }
+        foreach (Producto producto in productos2)
+        {
+            producto.gameObject.SetActive(false);
+        }
+    }
+
 }
