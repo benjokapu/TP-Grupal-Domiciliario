@@ -24,14 +24,14 @@ public class juegoBehaviour : MonoBehaviour
         return (num1 + num2 == resul) ? true : false;
     }
 
-    void botonResponderActivado()
+    public void botonResponderActivado()
     {
         if (resul.text=="")
         {
             panelNoResponde.SetActive(true);
             return;
         }
-        int resultado = Convert.ToInt32(objeto1.text) + Convert.ToInt32(objeto2.text);
+        int resultado = Convert.ToInt32(resul.text);
         if (checkearSuma(Convert.ToInt32(objeto1.text), Convert.ToInt32(objeto2.text), resultado)){
             panelBien.SetActive(true);
         }
@@ -40,18 +40,28 @@ public class juegoBehaviour : MonoBehaviour
             panelMal.SetActive(true);
         }
     }
-
-    void resetjuego()
+    void reiniciarPaneles()
     {
         panelNoResponde.SetActive(false);
         panelMal.SetActive(false);
         panelBien.SetActive(false);
+    }
+
+    public void resetjuego()
+    {
+        reiniciarPaneles();
         iniciarJuego();
     }
 
-    void botonSalirActivado()
+    public void botonSalirActivado()
     {
         
+    }
+
+    public void volverAIntentar()
+    {
+        reiniciarPaneles();
+        resul.text = "";
     }
 
     void iniciarJuego()
