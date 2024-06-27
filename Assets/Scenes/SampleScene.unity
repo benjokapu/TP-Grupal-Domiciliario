@@ -514,8 +514,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015904, y: 181}
-  m_SizeDelta: {x: 185.66351, y: 30}
+  m_AnchoredPosition: {x: -0.000022888, y: 189}
+  m_SizeDelta: {x: 401.32684, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &304802645
 MonoBehaviour:
@@ -542,13 +542,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cuanto suma?
+  m_Text: 'Ingresar el resultado de la suma:'
 --- !u!222 &304802646
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -779,9 +779,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Resultado?
-
-'
+  m_Text: '?'
 --- !u!222 &570156082
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -993,7 +991,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Checkear
+  m_Text: Responder
 --- !u!222 &1007503660
 CanvasRenderer:
   m_ObjectHideFlags: 0
